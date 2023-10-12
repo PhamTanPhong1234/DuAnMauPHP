@@ -1,0 +1,58 @@
+body {
+    display: grid; 
+    grid-template-columns: 32% 32% 32%  ;
+    grid-gap: 10px;
+    height: auto;
+    
+}
+::-webkit-scrollbar{
+    width:10px  ;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #ffffff28;
+}
+
+.container {
+    width: 100%;
+    padding: 10px;
+    flex: 1px;
+}
+.col {
+
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.col:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.im-product img {
+    width: 100%;
+    margin: 0 auto;
+    height: 18em;
+}
+
+.name-product h1 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.maSp,
+.theloaiSp,
+.soluong {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.giaSp {
+    font-size: 18px;
+    color: red;
+    margin: 5px 0;
+}

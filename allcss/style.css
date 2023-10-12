@@ -1,0 +1,577 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.mini-header {
+    width: 80%;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+}
+
+.mini-header a {
+    color: black;
+}
+
+.mini-header button {
+    margin: 0 10px;
+    padding: 3px 4px;
+}
+
+
+header {
+    background-color: #64CCC5;
+    height: 50px;
+    width: 100%;
+
+}
+
+header .navigation ul li {
+    display: inline-block;
+    list-style: none;
+    text-transform: uppercase;
+
+}
+
+header .navigation ul li a {
+    padding: 0 24px;
+    line-height: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #DAFFFB;
+    margin-right: 10px;
+
+}
+
+header .navigation ul li a:hover {
+    background-color: black;
+    color: aliceblue;
+    display: block;
+}
+
+#slide {
+    margin-top: 10px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 30em;
+    overflow: hidden;
+}
+
+#slide .slide-wrap {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide-wrap .slide {
+    width: calc(100%/4);
+    flex-shrink: 0;
+}
+
+.slide1 {
+    background: url('https://cdn.pico.vn/Files/2021/03/04/18017_BANNER%20(2).jpg') center center no-repeat;
+    background-size: 100%;
+
+}
+
+.slide2 {
+    background-size: 100%;
+    background: url('https://phongkhamtamthan.com/wp-content/uploads/2022/11/banner-YouCare-1400x787.png') center center no-repeat;
+}
+
+.slide3 {
+    background-size: 100%;
+    background: url('https://fptshop.com.vn/Uploads/Originals/2021/7/28/637630952345173421_xiaomi-thumb.jpg') center center no-repeat;
+}
+
+.slide4 {
+    background-size: 100%;
+    background: url('https://cdn-www.vinid.net/2020/08/789dc446-bannerweb_vsmart_1920x1080.jpg') center center no-repeat;
+}
+
+#dot {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    margin: 0 10px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 3px solid #000;
+    transition: 0.3s ease-in-out;
+}
+
+.dotAni {
+    background-color: #000;
+}
+#body #body-present .body-present {
+    padding-top: 80px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#body .body-present #present-box {
+    width: 30%;
+    /* background-color: red; */
+}
+
+#body .body-present #present-box img {
+    width: 100%;
+}
+
+#body #present-box a,
+#body #present-box p {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#body #present-box a:hover {
+    text-decoration: underline;
+}
+
+#body #present-box .present-title {
+    margin: 10px 0;
+}
+
+#body #present-box .present-title a {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    word-spacing: 1px;
+}
+
+#body #present-box p {
+    font-size: 16px;
+    line-height: 1.375;
+    font-weight: 200;
+    margin-bottom: 0.5em;
+
+}
+
+#body #present-box .access-title {
+    font-size: 14px;
+    padding: 4px 0;
+    color: #fff;
+}
+
+#body #present-box .access-title i {
+    margin-left: 10px;
+    color: #2F3132;
+}
+#body3 {
+    margin-top: 40px;
+    width: 100%;
+    background-color: black;
+}
+
+#body3 .title {
+    width: 100%;
+    text-align: center;
+}
+
+#body3 .title p {
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+.flex-box-review {
+    width: 80%;
+    height: 40em;
+    margin: auto;
+    padding-bottom: 10%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.flex-box-review .review {
+    width: 30%;
+}
+
+.flex-box-review .review h4 {
+    margin: 20px 0;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.flex-box-review .review .mini-page {
+    color: #ffffff7c;
+    margin-bottom: 10px;
+}
+
+.flex-box-review .review .avatar .name {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.flex-box-review .avatar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    margin: 5px 0;
+
+}
+
+.flex-box-review .avatar .pic1 {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: url('https://gaixinhbikini.com/wp-content/uploads/2023/02/hinh-co-gai-xinh-dep-005.jpg') right center no-repeat;
+    background-size: 100%;
+}
+
+.flex-box-review .avatar .pic2 {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: url('https://gaixinhbikini.com/wp-content/uploads/2022/08/34d6f424bedf3dbc00ad054aec65a28b.jpg') right center no-repeat;
+    background-size: 100%;
+}
+
+.flex-box-review .avatar .pic3 {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIg9VC258xz63EKCm6MiYQsbUg1vkPKohToQ&usqp=CAU    ') right center no-repeat;
+    background-size: 100%;
+}
+
+
+.flex-box-review .avatar .name {
+    font-weight: 300;
+}
+
+.flex-box-review .review .date {
+    color: #2F3132;
+}
+
+.flex-box-review .review hr {
+    color: #2F3132;
+}
+
+.flex-box-review .review .img1 {
+    width: 100%;
+    height: 250px;
+    background: url('https://banphimco.com/wp-content/uploads/2021/03/DSC02103.jpg') right center no-repeat;
+    background-size: 100%;
+    transition: 0.3s;
+}
+
+.review .img1:hover {
+    opacity: 0.8;
+}
+
+.flex-box-review .review .img2 {
+    width: 100%;
+    height: 250px;
+    background: url('https://hnp.vn/wp-content/uploads/2020/05/tai-nghe-redmi-airdots-h7-1.jpg') right center no-repeat;
+    background-size: 110%;
+    transition: 0.3s;
+}
+
+.review .img2:hover {
+    opacity: 0.8;
+}
+
+.flex-box-review .review .img3 {
+    width: 100%;
+    height: 250px;
+    background: url('https://product.hstatic.net/200000314529/product/img_2685_09417a3b553d48b5925bbcc8ddd10f29_master.jpg') right center no-repeat;
+    background-size: 110%;
+    transition: 0.3s;
+}
+
+.review .img3:hover {
+    opacity: 0.8;
+}
+#title {
+    width: 75%;
+    margin: auto;
+}
+
+.title {
+    padding-top: 110px;
+    color: #fff;
+    font-weight: 600;
+    width: 500px;
+    font-size: 50px;
+}
+#body4 {
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+#body4 .address {
+    width: 90%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#body4 .address .text-box {
+    width: 25%;
+    text-align: center;
+
+}
+
+#body4 .address .text-box .infor {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+#body4 .address .text-box p {
+    color: #2F3132;
+    margin-top: 15px;
+    line-height: 35px;
+    font-size: 15px;
+}
+#footer {
+    width: 100%;
+    height: 60vh;
+    background-color: #adadad;
+    text-transform: uppercase;
+}
+
+#footer .footer-infor {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-weight: 500;
+    justify-content: space-between;
+}
+
+#footer .footer-infor .site-box {
+    margin-top: 100px;
+    width: 25%;
+    height: 200px;
+}
+
+#footer .footer-infor .site-box a {
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    line-height: 35px;
+}
+
+#footer .footer-infor .site-box a:hover {
+    text-decoration: underline;
+
+}
+
+#footer .footer-icon {
+    width: 100%;
+    text-align: center;
+}
+
+#footer .footer-icon .box {
+    width: 15%;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .footer-icon .box i {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#body {
+    width: 100%;
+    height: fit-content;
+}
+
+
+
+/* body1 */
+#body #body1 {
+    width: 100%;
+    height: 70vh;
+    background: url('https://cdn-amz.woka.io/images/I/81bLwivNL2L.jpg') center center no-repeat;
+    background-size: 100%;
+
+}
+
+#body #body1 h2 {
+    padding-top: 40px;
+    word-spacing: 3px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+#body #body1 h4 {
+    font-weight: 300;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+#body #body1 .page {
+    width: 100%;
+    background-color: #00000078;
+    height: 100%;
+}
+
+#body #body1 p {
+    padding-top: 70px;
+    font-style: italic;
+    color: #ffffff;
+    width: 80%;
+    margin: auto;
+    line-height: 40px;
+    font-weight: 500;
+}
+
+
+
+/* body1 */
+/* body2 */
+#body2 h1 {
+    margin: 60px 0;
+    width: 100%;
+    text-align: center;
+}
+
+#body2 .founder {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #000;
+    color: #fff;
+    height: 120%;
+}
+
+.founder .founder-box {
+    width: calc(100%/3 - 15px);
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+}
+
+.founder .founder-box #founder-img {
+    margin-top: 75px;
+    width: 100px;
+    height: 100px;
+    border-radius: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.founder .founder-box .founder-img1 {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Steve_Jobs_Headshot_2010-CROP_%28cropped_2%29.jpg/640px-Steve_Jobs_Headshot_2010-CROP_%28cropped_2%29.jpg') center center no-repeat;
+    background-size: 100%;
+}
+
+.founder .founder-box .founder-img2 {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/0/03/Jeff_Bezos_visits_LAAFB_SMC_%283908618%29_%28cropped%29.jpeg') top center no-repeat;
+    background-size: 100%;
+}
+
+.founder .founder-box .founder-img3 {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/a/a8/Bill_Gates_2017_%28cropped%29.jpg') top center no-repeat;
+    background-size: 100%;
+}
+
+.founder .founder-box .founder-name,
+.founder .founder-box .founder-line {
+    width: 100%;
+    text-align: center;
+    margin: 12px 0;
+
+}
+
+.founder .founder-box .founder-line {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.founder .founder-box .founder-word {
+    padding-top: 10px;
+    width: 80%;
+    margin: auto;
+    padding-bottom:50px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* body2 */
+
+/* body3 */
+#body3 {
+    margin-top: 70px;
+    width: 100%;
+    /* background-color: rgb(255, 0, 0); */
+    height: 30em;
+}
+
+#body3 .body3-wrap {
+    width: 90%;
+    float: left;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#body3 .body3-wrap .commit {
+    width: 30em;
+    text-align: left;
+
+}
+
+#body3 .body3-wrap .commit h1 {
+    font-weight: 700;
+    font-size: 40px;
+    padding: 14px 0;
+    background: linear-gradient(to right, #30CFD0 0%, #5e08c8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#body3 .body3-wrap .video-wrap {
+    width: 60%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+}
+
+/* body3 */
+
+
+/* body */
+
+/* footer */
