@@ -94,7 +94,9 @@ nav a {
     text-decoration: none;
     background-color: #3a39396c;
 }
-
+.settings-icon{
+    background-color: none;
+}
 /* CSS cho icon */
 .settings-icon i {
     font-size: 24px; /* Kích thước biểu tượng */
@@ -105,8 +107,9 @@ nav a {
 .settings-icon #setting-caidat {
     display: none; /* Ẩn phần Cài đặt ban đầu */
     position: absolute;
-    background-color: #fff; /* Màu nền của phần Cài đặt */
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Đổ bóng cho phần Cài đặt */
+    /* background-color: #fff;  */
+    /* Màu nền của phần Cài đặt */
+    box-shadow: 0px 0px 5px rgb(255, 255, 255); /* Đổ bóng cho phần Cài đặt */
     padding: 10px; /* Khoảng cách bên trong phần Cài đặt */
     z-index: 1; /* Đặt z-index để nằm trên cùng */
 }
