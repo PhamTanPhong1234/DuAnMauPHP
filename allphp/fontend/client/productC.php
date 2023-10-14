@@ -1,7 +1,9 @@
 <?php
 include '../../backend/connect.php';
 session_start();
-//kiểm tra xem session user có tồn tại không
+$query = "SELECT * FROM ad";
+$result = mysqli_query($connect, $query);
+$row = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,11 +11,13 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sản Phẩm - X Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c13a07f3cd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../../allcss/style.css">
+    <script src="https://kit.fontawesome.com/c13a07f3cd.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/png" href="../../../img/logo.png"/>
     <link rel="stylesheet" href="../../../allcss/product.css">
     <script src="../../allJs/index.js"></script>
 
@@ -29,20 +33,17 @@ session_start();
         <div class="label">
             <?php
             if (isset($_SESSION['username'])) {
-            ?>Xin chào <?php echo  $_SESSION["username"];
-                        echo "<br>";
-                        echo "<a href ='../../backend/logout.php'><i>Đăng xuất</i></a>";
-                        ?>.
-        <?php
+                echo "Xin chào " . $_SESSION["username"] . "<br>";
+                echo "<a href='../admin/logout.php'><i>Đăng xuất</i></a> ";
+
+                if ($row["username"] == $_SESSION["username"]) {
+                    echo "<a href='../admin/admin.php' style = 'color: blue;'> Trang quản trị</a>";
+                }
             } else {
-                echo  "<button class='login'><a href='../login.php'>Đăng Nhập</a></button>";
-                echo  "<button class='resigter'><a href='../resigter.php'>Đăng kí</a></button>";
+                echo "<button class='login'><a href='../admin/login.php'>Đăng Nhập</a></button>";
+                echo "<button class='resigter'><a href='../admin/resigter.php'>Đăng kí</a></button>";
             }
-        ?>
-        <?php
-        $query = "SELECT * FROM sanpham";
-        $result = mysqli_query($connect, $query);
-        ?>
+            ?>
         </div>
     </div>
     </div>
@@ -69,6 +70,46 @@ session_start();
             </ul>
         </div>
         <iframe id="myIframe" src="../admin/product.php" frameborder="0"></iframe>
+    </div>
+    <div id="footer">
+        <div class="footer-infor">
+            <div class="site-box">
+                <a href="">Present</a><br>
+                <a href="">website privacy policy</a><br>
+                <a href="">Investors</a> <br>
+                <a href="">Email Options</a>
+            </div>
+            <div class="site-box">
+                <a href="">Contact</a><br>
+                <a href="">Privacy Policy
+                </a><br>
+                <a href="">terms of use</a> <br>
+                <a href=""></a>
+            </div>
+            <div class="site-box">
+                <a href="">Sustainability</a><br>
+                <a href="">Cookie settings</a><br>
+                <a href="">Sustainability</a> <br>
+                <a href=""></a>
+            </div>
+            <div class="site-box">
+                <a href="">Dev Cooperation Department</a><br>
+                <a href="">Sitemap</a><br>
+                <a href="">Recycling</a> <br>
+                <a href="">Email Options</a>
+            </div>
+        </div>
+        <div class="footer-icon">
+            <div class="box">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+            <i style="text-transform: capitalize; margin-top: 100px; font-size: 15px;">© 2023 Xshop. All rights
+                reserved.</i>
+        </div>
+
     </div>
 </body>
 

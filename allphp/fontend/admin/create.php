@@ -59,7 +59,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cài đặt</title>
+    <title>Thêm Sản Phẩm - Admin</title>
+    <link rel="shortcut icon" type="image/png" href="/../img/logo.png" />
     <link rel="stylesheet" href="css/read.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
@@ -106,13 +107,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </div>
 
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
+        <label for="maSp">Mã sản phẩm</label><br>
+        <input type="text" name="maSp" id="maSp"><br>
         <label for="tenSp">Tên sản phẩm</label>
         <input type="text" name="tenSp" id="tenSp" required>
         <input type="file" name="filetoupload" id="filetoupload"><br>
         <label for="giaSp">Giá sản phẩm</label>
-        <input type="text" name="giaSp" id="giaSp"><br>
-        <label for="maSp">Mã sản phẩm</label><br>
-        <input type="text" name="maSp" id="maSp"><br>
+        <input type="number" name="giaSp" id="giaSp"><br>
         <label for="theloaiSp">Thể loại sản phẩm</label>
         <input type="text" name="theloaiSp" id="theloaiSp"><br>
         <label for="soluong">Số lượng</label><br>

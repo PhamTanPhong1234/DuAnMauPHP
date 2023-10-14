@@ -27,7 +27,7 @@ $result = mysqli_query($connect, $query);
 <body>
 
     <?php
-    
+
     while ($row = mysqli_fetch_assoc($result)) {
         echo '
      <div class="container">
@@ -45,8 +45,7 @@ $result = mysqli_query($connect, $query);
                 <p><span>Thể loại:</span> ' . $row['theloaiSp'] . ' </p>
             </div>
             <div class="giaSp">
-                <p><span>Giá:</span> ' . $row['giaSp'] . ' <span>.000đ</span></p>
-            </div>
+            <p><span>Giá: </span>' . $row['giaSp'] . '<span>.000</span><span>.000đ</span></p>            </div>
             <div class="soluong">
                 <p><span>Số lượng:</span> ' . $row['soluong'] . '</p>
             </div>

@@ -1,13 +1,16 @@
 <?php
 include '../../backend/connect.php';
-//truy vấn danh sách sản phẩm
-$message ="";
-$infor ="";
+
+$message = "";
+$infor = "";
+$result = "";
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $infor = $_POST['information'];
 }
-$query = "SELECT * FROM sanpham where theloaiSP = '$infor' ";
-$result = mysqli_query($connect, $query);
+
+$message = '';
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +18,8 @@ $result = mysqli_query($connect, $query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cài đặt</title>
+    <link rel="shortcut icon" type="image/png" href="/../img/logo.png" />
+    <title>Danh Mục Sản Phẩm - Admin</title>
     <link rel="stylesheet" href="css/read.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
@@ -91,33 +95,53 @@ $result = mysqli_query($connect, $query);
     <div class="search">
         <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
             <div class="search-input">
-                <input id="information" name="information" type="text" placeholder="Vui lòng nhập loại sản phẩm (mobile, tablet, laptop)!!">
+                <input id="information" name="information" type="text" placeholder="Vui lòng nhập loại hoặc mã sản phẩm!">
                 <input type="submit" value="Tìm kiếm">
             </div>
         </form>
-        <span><?php echo $message;?></span>
+        <span><?php echo $message; ?></span>
     </div>
     <table class="bang">
         <tr>
-            <th>ID</th>
+            <th>Mã Sản Phẩm</th>
             <th>Tên sản phẩm</th>
             <th>Hình ảnh</th>
             <th>Sửa sản phẩm</th>
             <th>Xóa sản phẩm</th>
         </tr>
         <?php
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo "<tr>";
-            echo "<td>" . $row['id'] . "</td>";
-            echo "<td>" . $row['tenSp'] . "</td>";
-            echo "<td><img src=" . $row['anhSp'] . "></td>";
-            echo "<td>";
-            echo " <a class='edit' href='update.php?id=" . $row['id'] . "'>Sửa</a> ";
-            echo "</td>";
-            echo "<td>";
-            echo " <a href='delete.php?id=" . $row['id'] . "'>Xóa</a> ";
-            echo "</td>";
-            echo "</tr>";
+        $Iquery = "SELECT * FROM sanpham WHERE maSp = '$infor'";
+        $Iresult = mysqli_query($connect, $Iquery);
+        if (mysqli_num_rows($Iresult) > 0) {
+            while ($row = mysqli_fetch_assoc($Iresult)) {
+                echo "<tr>";
+                echo "<td>" . $row['maSp'] . "</td>";
+                echo "<td>" . $row['tenSp'] . "</td>";
+                echo "<td><img src=" . $row['anhSp'] . "></td>";
+                echo "<td>";
+                echo " <a class='edit' href='update.php?id=" . $row['id'] . "'>Sửa</a> ";
+                echo "</td>";
+                echo "<td>";
+                echo " <a href='delete.php?id=" . $row['id'] . "'>Xóa</a> ";
+                echo "</td>";
+                echo "</tr>";
+            }
+        } else {
+            $query = "SELECT * FROM sanpham WHERE theloaiSp = '$infor'";
+            $result = mysqli_query($connect, $query);
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<tr>";
+                echo "<td>" . $row['maSp'] . "</td>";
+                echo "<td>" . $row['tenSp'] . "</td>";
+                echo "<td><img src=" . $row['anhSp'] . "></td>";
+                echo "<td>";
+                echo " <a class='edit' href='update.php?id=" . $row['id'] . "'>Sửa</a> ";
+                echo "</td>";
+                echo "<td>";
+                echo " <a href='delete.php?id=" . $row['id'] . "'>Xóa</a> ";
+                echo "</td>";
+                echo "</tr>";
+            }
         }
         mysqli_close($connect);
         ?>

@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cài đặt</title>
+    <title>Xóa - Admin</title>
+    <link rel="shortcut icon" type="image/png" href="/../img/logo.png" />
     <link rel="stylesheet" href="css/read.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
@@ -21,9 +22,9 @@
     <div class="content">
         <h1><img src="../../../img/logo.png" alt="" style="width:10%"></h1>
         <nav>
-            <a href="sanpham.php">
+            <a href="../index.php">
                 << Trang chủ</a>
-                <a href="../index.php"><< Trang chủ</a>
+                    <a href="admin.php"> Danh sách sản phẩm</a>
                     <a href="catelory.php">Danh mục sản phẩm</a>
                     <a href="create.php">Thêm sản phẩm</a>
                     <a href="update.php">Cập nhật sản phẩm</a>
@@ -46,8 +47,9 @@
                 </a>
             </div>
         </div>
-    </div> 
+    </div>
 </body>
+
 </html>
 <?php
 //kiểm tra xem có id được truyển vào kh
@@ -67,7 +69,7 @@ if (isset($_GET['id'])) {
         echo "Có lỗi xảy ra" . mysqli_error($connect);
     }
     //đóng kết nối
-   mysqli_close($connect); 
+    mysqli_close($connect);
 } else {
     echo "Không tìm thấy sản phẩm để xóa, <br> vui lòng kiểm tra lại!";
 }

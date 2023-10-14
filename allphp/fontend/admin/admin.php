@@ -11,7 +11,8 @@ $result = mysqli_query($connect,$query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cài đặt</title>
+    <title>Danh Sách Sản Phẩm - Admin</title>
+    <link rel="shortcut icon" type="image/png" href="/../img/logo.png" />
     <link rel="stylesheet" href="css/read.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
@@ -54,7 +55,7 @@ $result = mysqli_query($connect,$query);
     </div> 
         <table class="bang">
             <tr>
-                <th>ID</th>
+                <th>Mã Sản Phẩm</th>
                 <th>Tên sản phẩm</th>
                 <th>Hình ảnh</th>
                 <th>Sửa sản phẩm</th>
@@ -64,7 +65,7 @@ $result = mysqli_query($connect,$query);
             //hiển thị danh sách sản phẩm từ database
             while($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>";
-                echo "<td>" .$row['id'] . "</td>";
+                echo "<td>" .$row['maSp'] . "</td>";
                 echo "<td>" .$row['tenSp'] . "</td>";
                 echo "<td><img src=".$row['anhSp']."></td>";
                 echo "<td>";

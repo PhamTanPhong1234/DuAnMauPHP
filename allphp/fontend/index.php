@@ -1,7 +1,9 @@
 <?php
-include '../backend/connect.php';
 session_start();
-//kiểm tra xem session user có tồn tại không
+include '../backend/connect.php';
+$query = "SELECT * FROM ad";
+$result = mysqli_query($connect, $query);
+$row = mysqli_fetch_assoc($result);
 ?>
 
 
@@ -13,11 +15,12 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Trang Chủ - X Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c13a07f3cd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../allcss/style.css">
+    <link rel="shortcut icon" type="image/png" href="/../img/logo.png"/>
     <script src="../../allJs/index.js"></script>
     <script src="https://kit.fontawesome.com/c13a07f3cd.js" crossorigin="anonymous"></script>
 
@@ -33,16 +36,17 @@ session_start();
         <div class="label">
             <?php
             if (isset($_SESSION['username'])) {
-            ?>Xin chào <?php echo  $_SESSION["username"];
-                        echo "<br>";
-                        echo "<a href ='../backend/logout.php'><i>Đăng xuất</i></a>";
-                        ?>
-        <?php
+                echo "Xin chào " . $_SESSION["username"] . "<br>";
+                echo "<a href='../backend/logout.php'><i>Đăng xuất</i></a> ";
+
+                if ($row["username"] == $_SESSION["username"]) {
+                    echo "<a href='./admin/admin.php' style = 'color: blue;'> Trang quản trị</a>";
+                }
             } else {
-                echo  "<button class='login'><a href='./login.php'>Đăng Nhập</a></button>";
-                echo  "<button class='resigter'><a href='./resigter.php'>Đăng kí</a></button>";
+                echo "<button class='login'><a href='./login.php'>Đăng Nhập</a></button>";
+                echo "<button class='resigter'><a href='./resigter.php'>Đăng kí</a></button>";
             }
-        ?>
+            ?>
         </div>
     </div>
     </div>
@@ -55,6 +59,7 @@ session_start();
                     <li><a href="../fontend/client/productC.php">Sản Phẩm</a></li>
                     <li><a href="./present.php">Giới Thiệu</a></li>
                     <li><a href="./contact.php">Hỗ Trợ</a></li>
+                    <li><a href="./cart.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </div>
         </div>
