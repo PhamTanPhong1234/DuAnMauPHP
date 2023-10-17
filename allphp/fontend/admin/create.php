@@ -113,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <input type="text" name="tenSp" id="tenSp" required>
         <input type="file" name="filetoupload" id="filetoupload"><br>
         <label for="giaSp">Giá sản phẩm</label>
-        <input type="number" name="giaSp" id="giaSp"><br>
+        <input type="text" name="giaSp" id="giaSp"><br>
         <label for="theloaiSp">Thể loại sản phẩm</label>
         <input type="text" name="theloaiSp" id="theloaiSp"><br>
         <label for="soluong">Số lượng</label><br>

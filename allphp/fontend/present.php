@@ -59,6 +59,8 @@ $row = mysqli_fetch_assoc($result);
                     <li><a href="../fontend/client/productC.php">Sản Phẩm</a></li>
                     <li><a href="" style="color:#fff; background:black; display:block;">Giới Thiệu</a></li>
                     <li><a href="./contact.php">Hỗ Trợ</a></li>
+                    <li><a href="./cart.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
+
                 </ul>
             </div>
         </div>
