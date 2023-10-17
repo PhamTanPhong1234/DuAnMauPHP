@@ -27,8 +27,6 @@
                     <a href="admin.php"> Danh sách sản phẩm</a>
                     <a href="catelory.php">Danh mục sản phẩm</a>
                     <a href="create.php">Thêm sản phẩm</a>
-                    <a href="update.php">Cập nhật sản phẩm</a>
-                    <a href="delete.php" style="color:red">Xóa sản phẩm</a>
         </nav>
         <div class="icon-z">
             <div class="icon">

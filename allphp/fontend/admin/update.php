@@ -1,9 +1,17 @@
 <?php
 include '../../backend/connect.php';
 $message = "";
+// $screenQuery = "SELECT * FROM sanpham where id = '$id'";
+// $screenResult = mysqli_query($connect, $screenQuery);
+// $row = mysqli_fetch_assoc($screenResult);
+// $name = $row['tenSp'];
+// $theloai = $row['theloaiSp'];
+// $price = $row['giaSp'];
+// $so = $row['soluong'];
 
 if (isset($_POST['submit'])) {
     $id = $_POST['id'];
+    // hiển thị giá trị cho dễ chỉnh sửa
     $tenSp = $_POST['tenSp'];
     $theloaiSp = $_POST['theloaiSp'];
     $soLuong = $_POST['soLuong'];
@@ -12,12 +20,21 @@ if (isset($_POST['submit'])) {
     $query = "UPDATE sanpham SET tenSp = '$tenSp', soluong = '$soLuong', theloaiSp = '$theloaiSp', giaSp = '$price' WHERE id = '$id'";
     $result = mysqli_query($connect, $query);
     if ($result) {
-        $message = "Cập nhật sản phẩm thành công!";
+        header('Location: admin.php');
     } else {
         $message = "Có lỗi xảy ra" . mysqli_error($connect);
     }
 } elseif (isset($_GET['id'])) {
     $id = $_GET['id'];
+    /* hiển thị thông tin */
+    $screenQuery = "SELECT * FROM sanpham where id = '$id'";
+    $screenResult = mysqli_query($connect, $screenQuery);
+    $rowF = mysqli_fetch_assoc($screenResult);
+    $name = $rowF['tenSp'];
+    $theloai = $rowF['theloaiSp'];
+    $price = $rowF['giaSp'];
+    $so = $rowF['soluong'];
+    /* hiển thị thông tin */
     $query = "SELECT * FROM sanpham WHERE id = '$id'";
     $result = mysqli_query($connect, $query);
 
@@ -92,13 +109,13 @@ if (isset($_POST['submit'])) {
         <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo $id; ?>"><br>
             <label for="tenSp">Tên sản phẩm</label>
-            <input type="text" name="tenSp" id="tenSp" required>
+            <input type="text" name="tenSp" id="tenSp" required value="<?php echo $name ?>">
             <label for="theloaiSp">Loại Sản Phẩm</label>
-            <input type="text" name="theloaiSp" id="theloaiSp" required>
+            <input type="text" name="theloaiSp" id="theloaiSp" required value="<?php echo $theloai ?>">
             <label for="price">Giá Tiền</label>
-            <input type="text" name="price" id="price" required>
+            <input type="text" name="price" id="price" required value="<?php echo $price ?> ">
             <label for="soLuong">Số lượng sản phẩm</label>
-            <input type="text" name="soLuong" id="soLuong" required>
+            <input type="text" name="soLuong" id="soLuong" required value="<?php echo $so ?>">
             <input type="submit" name="submit" value="Cập nhật sản phẩm"><br><br>
             <span><?php echo $message; ?></span>
         </form>

@@ -34,14 +34,14 @@ $row = mysqli_fetch_assoc($result);
             <?php
             if (isset($_SESSION['username'])) {
                 echo "Xin chào " . $_SESSION["username"] . "<br>";
-                echo "<a href='../admin/logout.php'><i>Đăng xuất</i></a> ";
+                echo "<a href='../../backend/logout.php'><i>Đăng xuất</i></a> ";
 
                 if ($row["username"] == $_SESSION["username"]) {
                     echo "<a href='../admin/admin.php' style = 'color: blue;'> Trang quản trị</a>";
                 }
             } else {
-                echo "<button class='login'><a href='../admin/login.php'>Đăng Nhập</a></button>";
-                echo "<button class='resigter'><a href='../admin/resigter.php'>Đăng kí</a></button>";
+                echo "<button class='login'><a href='../login.php'>Đăng Nhập</a></button>";
+                echo "<button class='resigter'><a href='../resigter.php'>Đăng kí</a></button>";
             }
             ?>
         </div>

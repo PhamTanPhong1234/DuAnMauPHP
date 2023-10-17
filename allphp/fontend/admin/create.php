@@ -84,8 +84,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         <a href="admin.php"> Danh sách sản phẩm</a>
                         <a href="catelory.php">Danh mục sản phẩm</a>
                         <a href="create.php" style="color:red;">Thêm sản phẩm</a>
-                        <a href="update.php">Cập nhật sản phẩm</a>
-                        <a href="delete.php">Xóa sản phẩm</a>
         </nav>
         <div class="icon-z">
             <div class="icon">
@@ -105,9 +103,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </div>
         </div>
     </div>
-
+        <br>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
-        <label for="maSp">Mã sản phẩm</label><br>
+        <label for="maSp">Mã sản phẩm</label>
         <input type="text" name="maSp" id="maSp"><br>
         <label for="tenSp">Tên sản phẩm</label>
         <input type="text" name="tenSp" id="tenSp" required>

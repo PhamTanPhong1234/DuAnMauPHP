@@ -32,8 +32,6 @@ $result = mysqli_query($connect,$query);
             <a href="admin.php" style="color:red">Danh sách sản phẩm</a>
             <a href="catelory.php">Danh mục sản phẩm</a>
             <a href="create.php">Thêm sản phẩm</a>
-            <a href="update.php">Cập nhật sản phẩm</a>
-            <a href="delete.php">Xóa sản phẩm</a>
         </nav>
         <div class="icon-z">
             <div class="icon">
@@ -58,6 +56,8 @@ $result = mysqli_query($connect,$query);
                 <th>Mã Sản Phẩm</th>
                 <th>Tên sản phẩm</th>
                 <th>Hình ảnh</th>
+                <th>Giá tiền</th>
+                <th>Số lượng</th>
                 <th>Sửa sản phẩm</th>
                 <th>Xóa sản phẩm</th>
             </tr>
@@ -68,6 +68,8 @@ $result = mysqli_query($connect,$query);
                 echo "<td>" .$row['maSp'] . "</td>";
                 echo "<td>" .$row['tenSp'] . "</td>";
                 echo "<td><img src=".$row['anhSp']."></td>";
+                echo  "<td><p>" . $row['giaSp'] . "<span>.000</span><span>.000đ</span></p></td>";            
+                echo "<td><p>" . $row['soluong'] . "</p></td>";
                 echo "<td>";
                 echo " <a class='edit' href='update.php?id=" . $row['id'] ."'>Sửa</a> ";
                 echo "</td>";
