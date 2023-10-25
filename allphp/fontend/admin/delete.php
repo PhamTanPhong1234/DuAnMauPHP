@@ -19,34 +19,18 @@
 </head>
 
 <body>
-    <div class="content">
-        <h1><img src="../../../img/logo.png" alt="" style="width:10%"></h1>
+<div class="content">
+        <h1><img src="https://coyotelsp.com/cdn/shop/files/coyote-logo-main.png?v=1637698541" alt="" style="width:15%;margin-bottom:20px;"></h1>
         <nav>
             <a href="../index.php">
                 << Trang chủ</a>
-                    <a href="admin.php"> Danh sách sản phẩm</a>
+                    <a href="admin.php">Danh sách sản phẩm</a>
                     <a href="catelory.php">Danh mục sản phẩm</a>
                     <a href="create.php">Thêm sản phẩm</a>
         </nav>
         <div class="icon-z">
-            <div class="icon">
-                <a href="cart.php">
-                    <i class="fas fa-shopping-cart" style="color: #fff;"></i>
-                </a>
-            </div>
-            <div class="settings-icon">
-                <a href="setting.php">
-                    <i class="fas fa-bars"></i>
-                    <div class="caidat" id="setting-caidat">
-                        Cài đặt
-                        <a href="user.php">tài khoản cá nhân</a>
-                        <a href="logout.php" title="Logout">Đăng xuất</a>
-                    </div>
-                </a>
-            </div>
         </div>
-    </div>
-</body>
+    </div></body>
 
 </html>
 <?php

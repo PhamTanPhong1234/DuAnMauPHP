@@ -76,34 +76,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <body>
     <div class="content">
-        <h1><img src="../../../img/logo.png" alt="" style="width:10%"></h1>
+        <h1><img src="https://coyotelsp.com/cdn/shop/files/coyote-logo-main.png?v=1637698541" alt="" style="width:15%;margin-bottom:20px;"></h1>
         <nav>
-            <a href="sanpham.php">
-                <a href="../index.php">
-                    << Trang chủ</a>
-                        <a href="admin.php"> Danh sách sản phẩm</a>
-                        <a href="catelory.php">Danh mục sản phẩm</a>
-                        <a href="create.php" style="color:red;">Thêm sản phẩm</a>
+            <a href="../index.php">
+                << Trang chủ</a>
+                    <a href="admin.php">Danh sách sản phẩm</a>
+                    <a href="catelory.php">Danh mục sản phẩm</a>
+                    <a href="create.php" style="color:red">Thêm sản phẩm</a>
         </nav>
         <div class="icon-z">
-            <div class="icon">
-                <a href="cart.php">
-                    <i class="fas fa-shopping-cart" style="color: #fff;"></i>
-                </a>
-            </div>
-            <div class="settings-icon">
-                <a href="setting.php">
-                    <i class="fas fa-bars"></i>
-                    <div class="caidat" id="setting-caidat">
-                        Cài đặt
-                        <a href="user.php">tài khoản cá nhân</a>
-                        <a href="logout.php" title="Logout">Đăng xuất</a>
-                    </div>
-                </a>
-            </div>
         </div>
     </div>
-        <br>
+    </div>
+    <br>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
         <label for="maSp">Mã sản phẩm</label>
         <input type="text" name="maSp" id="maSp"><br>

@@ -1,8 +1,8 @@
-<?php 
+<?php
 include '../../backend/connect.php';
 //truy vấn danh sách sản phẩm
 $query = "SELECT * FROM sanpham";
-$result = mysqli_query($connect,$query);
+$result = mysqli_query($connect, $query);
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@ $result = mysqli_query($connect,$query);
     <link rel="stylesheet" href="css/read.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        img{
+        img {
             width: 100px;
             height: auto;
         }
@@ -25,64 +25,50 @@ $result = mysqli_query($connect,$query);
 </head>
 
 <body>
-<div class="content">
-        <h1><img src="../../../img/logo.png" alt="" style="width:10%"></h1>
+    <div class="content">
+        <h1><img src="https://coyotelsp.com/cdn/shop/files/coyote-logo-main.png?v=1637698541" alt="" style="width:15%;margin-bottom:20px;"></h1>
         <nav>
-            <a href="../index.php"><< Trang chủ</a>
-            <a href="admin.php" style="color:red">Danh sách sản phẩm</a>
-            <a href="catelory.php">Danh mục sản phẩm</a>
-            <a href="create.php">Thêm sản phẩm</a>
+            <a href="../index.php">
+                << Trang chủ</a>
+                    <a href="admin.php" style="color:red">Danh sách sản phẩm</a>
+                    <a href="catelory.php">Danh mục sản phẩm</a>
+                    <a href="create.php">Thêm sản phẩm</a>
         </nav>
         <div class="icon-z">
-            <div class="icon">
-                <a href="cart.php">
-                    <i class="fas fa-shopping-cart" style="color: #fff;"></i>
-                </a>
-            </div>
-            <div class="settings-icon">
-                <a href="setting.php">
-                    <i class="fas fa-bars"></i>
-                    <div class="caidat" id="setting-caidat">
-                        Cài đặt 
-                        <a href="user.php">tài khoản cá nhân</a> 
-                        <a href="logout.php" title="Logout">Đăng xuất</a>
-                    </div>
-                </a>
-            </div>
         </div>
-    </div> 
-        <table class="bang">
-            <tr>
-                <th>Mã Sản Phẩm</th>
-                <th>Tên sản phẩm</th>
-                <th>Hình ảnh</th>
-                <th>Giá tiền</th>
-                <th>Số lượng</th>
-                <th>Sửa sản phẩm</th>
-                <th>Xóa sản phẩm</th>
-            </tr>
-            <?php
-            //hiển thị danh sách sản phẩm từ database
-            while($row = mysqli_fetch_assoc($result)) {
-                echo "<tr>";
-                echo "<td>" .$row['maSp'] . "</td>";
-                echo "<td>" .$row['tenSp'] . "</td>";
-                echo "<td><img src=".$row['anhSp']."></td>";
-                echo  "<td><p>" . $row['giaSp'] . "<span>.000</span><span>.000đ</span></p></td>";            
-                echo "<td><p>" . $row['soluong'] . "</p></td>";
-                echo "<td>";
-                echo " <a class='edit' href='update.php?id=" . $row['id'] ."'>Sửa</a> ";
-                echo "</td>";
-                echo "<td>";
-                echo " <a href='delete.php?id=" . $row['id'] ."'>Xóa</a> ";
-                echo "</td>";
-                echo "</tr>";
-            }
-            ?>
-        </table>
+    </div>
+    <table class="bang">
+        <tr>
+            <th>Mã Sản Phẩm</th>
+            <th>Tên sản phẩm</th>
+            <th>Hình ảnh</th>
+            <th>Giá tiền</th>
+            <th>Số lượng</th>
+            <th>Sửa sản phẩm</th>
+            <th>Xóa sản phẩm</th>
+        </tr>
+        <?php
+        //hiển thị danh sách sản phẩm từ database
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<tr>";
+            echo "<td>" . $row['maSp'] . "</td>";
+            echo "<td>" . $row['tenSp'] . "</td>";
+            echo "<td><img src=" . $row['anhSp'] . "></td>";
+            echo  "<td><p>" . $row['giaSp'] . "<span>.000</span><span>.000đ</span></p></td>";
+            echo "<td><p>" . $row['soluong'] . "</p></td>";
+            echo "<td>";
+            echo " <a class='edit' href='update.php?id=" . $row['id'] . "'>Sửa</a> ";
+            echo "</td>";
+            echo "<td>";
+            echo " <a href='delete.php?id=" . $row['id'] . "'>Xóa</a> ";
+            echo "</td>";
+            echo "</tr>";
+        }
+        ?>
+    </table>
 </body>
 
 </html>
-<?php 
+<?php
 mysqli_close($connect);
 ?>

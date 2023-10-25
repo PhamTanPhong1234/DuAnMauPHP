@@ -1,6 +1,6 @@
 <?php
 include '../../backend/connect.php';
-$message = "";  
+$message = "";
 
 if (isset($_POST['submit'])) {
     $id = $_POST['id'];
@@ -70,35 +70,20 @@ if (isset($_POST['submit'])) {
 
 <body>
     <div class="content">
-        <h1><img src="../../../img/logo.png" alt="" style="width: 10%"></h1>
+        <h1><img src="https://coyotelsp.com/cdn/shop/files/coyote-logo-main.png?v=1637698541" alt="" style="width:15%;margin-bottom:20px;"></h1>
         <nav>
             <a href="../index.php">
                 << Trang chủ</a>
                     <a href="admin.php">Danh sách sản phẩm</a>
                     <a href="catelory.php">Danh mục sản phẩm</a>
                     <a href="create.php">Thêm sản phẩm</a>
-                    <a href="update.php" style="color: red">Cập nhật sản phẩm</a>
-                    <a href="delete.php">Xóa sản phẩm</a>
         </nav>
         <div class="icon-z">
-            <div class="icon">
-                <a href="cart.php">
-                    <i class="fas fa-shopping-cart" style="color: #fff;"></i>
-                </a>
-            </div>
-            <div class="settings-icon">
-                <a href="setting.php">
-                    <i class="fas fa-bars"></i>
-                    <div class="caidat" id="setting-caidat">
-                        Cài đặt
-                        <a href="user.php">Tài khoản cá nhân</a>
-                        <a href="logout.php" title="Logout">Đăng xuất</a>
-                    </div>
-                </a>
-            </div>
         </div>
     </div>
+
     <div class="sanpham">
+        <h1 style="width:100%;background-color:#ccc;text-align:center; padding:12px 0px;">Sửa Sản Phẩm</h1>
         <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo $id; ?>"><br>
             <label for="tenSp">Tên sản phẩm</label>
@@ -110,6 +95,7 @@ if (isset($_POST['submit'])) {
             <label for="soLuong">Số lượng sản phẩm</label>
             <input type="text" name="soLuong" id="soLuong" required value="<?php echo $so ?>">
             <input type="submit" name="submit" value="Cập nhật sản phẩm"><br><br>
+            <a href="./admin.php">Quay Về Danh Mục</a>
             <span><?php echo $message; ?></span>
         </form>
     </div>
