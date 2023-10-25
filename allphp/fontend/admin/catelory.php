@@ -2,6 +2,7 @@
 include '../../backend/connect.php';
 
 $message = "";
+$imessage = "";
 $infor = "";
 $result = "";
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
@@ -101,17 +102,19 @@ $message = '';
     </div>
     <table class="bang">
         <tr>
-        <th>Mã Sản Phẩm</th>
-                <th>Tên sản phẩm</th>
-                <th>Hình ảnh</th>
-                <th>Giá tiền</th>
-                <th>Số lượng</th>
-                <th>Sửa sản phẩm</th>
-                <th>Xóa sản phẩm</th>
+            <th>Mã Sản Phẩm</th>
+            <th>Tên sản phẩm</th>
+            <th>Hình ảnh</th>
+            <th>Giá tiền</th>
+            <th>Số lượng</th>
+            <th>Sửa sản phẩm</th>
+            <th>Xóa sản phẩm</th>
         </tr>
         <?php
         $Iquery = "SELECT * FROM sanpham WHERE maSp = '$infor'";
         $Iresult = mysqli_query($connect, $Iquery);
+        $query = "SELECT * FROM sanpham WHERE theloaiSp = '$infor'";
+        $result = mysqli_query($connect, $query);
         if (mysqli_num_rows($Iresult) > 0) {
             while ($row = mysqli_fetch_assoc($Iresult)) {
                 echo "<tr>";
@@ -128,9 +131,7 @@ $message = '';
                 echo "</td>";
                 echo "</tr>";
             }
-        } else {
-            $query = "SELECT * FROM sanpham WHERE theloaiSp = '$infor'";
-            $result = mysqli_query($connect, $query);
+        } else if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>";
                 echo "<td>" . $row['maSp'] . "</td>";
@@ -146,11 +147,17 @@ $message = '';
                 echo "</td>";
                 echo "</tr>";
             }
-        }
-        mysqli_close($connect);
+        } else {
+            $imessage = "Không tìm thấy nội dung tìm kiếm !!";
+        };
         ?>
     </table>
-
+    <?php if ($_SERVER['REQUEST_METHOD'] === "POST") {
+        echo "<br>";
+        echo "<span style='color:red;'>" . $imessage . "</span>";
+    }
+    ?>
 </body>
 
 </html>
+<?php mysqli_close($connect) ?>

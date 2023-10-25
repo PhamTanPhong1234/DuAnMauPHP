@@ -1,13 +1,6 @@
 <?php
 include '../../backend/connect.php';
-$message = "";
-// $screenQuery = "SELECT * FROM sanpham where id = '$id'";
-// $screenResult = mysqli_query($connect, $screenQuery);
-// $row = mysqli_fetch_assoc($screenResult);
-// $name = $row['tenSp'];
-// $theloai = $row['theloaiSp'];
-// $price = $row['giaSp'];
-// $so = $row['soluong'];
+$message = "";  
 
 if (isset($_POST['submit'])) {
     $id = $_POST['id'];
