@@ -56,6 +56,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <button type="submit">Đăng Nhập</button>
         </form>
         <p>Chưa có tài khoản? <a href="./resigter.php">Đăng ký ngay</a></p>
+        <br>
+        <a href="./index.php"> <<<< Quay Về Trang Chủ</a>
     </div>
 </body>
 

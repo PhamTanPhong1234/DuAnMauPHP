@@ -59,6 +59,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         <input type="submit" value="Đăng Ký"> <br><br>
         <span><?php echo $message;?></span>
+
+        <br>
+        <a href="./index.php"> <<<< Quay Về Trang Chủ</a>
     </form>
    
 </body>
