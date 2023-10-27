@@ -30,7 +30,7 @@ $result = mysqli_query($connect, $query);
         <nav>
             <a href="../index.php">
                 << Trang chủ</a>
-                    <a href="admin.php" style="color:red">Danh sách sản phẩm</a>
+                    <a href="admin.php" style="color:blue">Danh sách sản phẩm</a>
                     <a href="catelory.php">Danh mục sản phẩm</a>
                     <a href="create.php">Thêm sản phẩm</a>
         </nav>

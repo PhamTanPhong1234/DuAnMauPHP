@@ -48,9 +48,11 @@ $result = mysqli_query($connect, $query);
             <p><span>Giá: </span>' . $row['giaSp'] . '<span>.000</span><span>.000đ</span></p>            </div>
             <div class="soluong">
                 <p><span>Số lượng:</span> ' . $row['soluong'] . '</p>
-            </div>
+            </div> 
+            <button class ="buy-button">Mua Ngay</button>
         </div>
-     </div> ';
+
+    </div> ';
     }
     ?>
 </body>

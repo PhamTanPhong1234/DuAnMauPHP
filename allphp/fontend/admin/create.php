@@ -1,9 +1,10 @@
 <?php
 include '../../backend/connect.php';
 session_start();
-$message = "";
+$message ="";
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $tenSp = $_POST['tenSp'];
+    $message = "";
     $target_dir = "./uploads/";
     $giaSp = $_POST['giaSp'];
     $maSp = $_POST['maSp'];
@@ -29,9 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($imageFiletype != "jpg" && $imageFiletype != "png" && $imageFiletype != "jpeg" && $imageFiletype != "gif") {
         $message = "Chỉ chấp nhận file PNG,JPEG,JPG và GIF";
         $$uploadok = 0;
-    }
-    if ($uploadok == 0) {
-        echo $message;
     } else {
 
         if (move_uploaded_file($_FILES["filetoupload"]["tmp_name"], $target_file)) {
@@ -82,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 << Trang chủ</a>
                     <a href="admin.php">Danh sách sản phẩm</a>
                     <a href="catelory.php">Danh mục sản phẩm</a>
-                    <a href="create.php" style="color:red">Thêm sản phẩm</a>
+                    <a href="create.php" style="color:blue">Thêm sản phẩm</a>
         </nav>
         <div class="icon-z">
         </div>

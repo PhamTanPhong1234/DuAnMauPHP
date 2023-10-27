@@ -1,0 +1,152 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ .container, .err {
+     width: 90%;
+     margin-top: 10px;
+     margin-left: auto;
+     margin-right: auto;
+     display: flex;
+     justify-content: space-around;
+ }
+
+ .container .l1 {
+     border-radius: 10px;
+     background-color: #f9f9f9;
+     width: 45%;
+     height: 500px;
+     box-shadow: 10px 3px rgb(189, 189, 189);
+ }
+
+ l1.form1 {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+ }
+
+ /* Style the form container */
+ form {
+     width: 100%;
+     padding: 20px;
+     border-radius: 5px;
+     background-color: #f9f9f9;
+ }
+
+ /* Style the form header */
+ h2 {
+     text-align: center;
+     font-size: 24px;
+     margin-bottom: 20px;
+ }
+
+ /* Style labels and input fields */
+ label {
+     display: block;
+     margin-bottom: 5px;
+     font-weight: bold;
+ }
+
+ input[type="text"] {
+     width: 100%;
+     padding: 10px;
+     margin-bottom: 10px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     border: 1px solid cornflowerblue ;
+ }
+
+
+ /* Style radio buttons and labels */
+ .payment-method input[type="radio"] {
+     margin-right: 5px;
+ }
+
+ .payment-method label {
+     display: inline;
+     font-weight: normal;
+     margin-right: 10px;
+ }
+
+ /* Style the submit button */
+ input[type="submit"] {
+     background-color: #007bff;
+     color: #fff;
+     padding: 10px 20px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     display: block;
+     margin: 20px auto;
+ }
+
+ input[type="submit"]:hover {
+     background-color: #0056b3;
+ }
+ /* Apply styles to the table */
+table {
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    border-collapse: collapse;
+
+}
+
+/* Style table headers */
+th {  background-color: black;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Style table cells */
+td {
+    height: 20px;
+    padding: 8px;
+    color: black;
+    border: 1px solid #ddd;
+}
+tr{
+    height: 20px;
+}
+
+.errbox {
+    align-items: center ;
+    width:300px;
+    height: 200px;
+    background-color: #ededed; /* Màu nền đỏ */
+    color: #000000; /* Màu chữ trắng */
+    padding: 10px; /* Khoảng cách giữa nội dung và viền của thẻ */
+    text-align: center; /* Canh giữa nội dung trong thẻ */
+    border: 1px solid #000; /* Viền đen 1px xung quanh thẻ */
+    margin: 20px auto; /* Canh giữa theo chiều ngang */
+    max-width: 300px; /* Độ rộng tối đa của thẻ */
+}
+
+.errbox h3 {
+    margin-top: 30px;
+    font-size: 20px;
+    text-transform: uppercase; 
+    font-weight: 600;
+    /* 
+    Cỡ chữ 20px cho thẻ h3 bên trong errbox */
+}
+
+.errbox a {
+    color: rgb(255, 0, 0); /* Màu chữ xanh dương cho các liên kết */
+    text-decoration: none;
+    transition: 0.3s;/* Loại bỏ gạch chân cho các liên kết */
+}
+
+.errbox a:hover {
+    text-decoration: underline;
+    color: rgb(76, 192, 224); /* Gạch chân khi di chuột qua liên kết */
+}
+
+.errbox i {
+    font-style: italic; /* Ký hiệu nghiêng cho thẻ i bên trong errbox */
+}

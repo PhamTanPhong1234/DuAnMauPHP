@@ -31,17 +31,17 @@ $row = mysqli_fetch_assoc($result);
             <a href="" style="line-height: 40px;">Việt Nam</a>
         </div>
         <div class="label">
-            <?php
+        <?php
             if (isset($_SESSION['username'])) {
-                echo "Xin chào " . $_SESSION["username"] . "<br>";
-                echo "<a href='../../backend/logout.php'><i>Đăng xuất</i></a> ";
+                echo " Xin chào<span style ='color:red ; text-transform:uppercase'> " . $_SESSION["username"] . "</span><br>";
+                echo "<a href='../backend/logout.php'><i>Đăng xuất</i></a> ";
 
                 if ($row["username"] == $_SESSION["username"]) {
-                    echo "<a href='../admin/admin.php' style = 'color: blue;'> Trang quản trị</a>";
+                    echo "<a href='./admin/admin.php' style = 'color: blue;'> Trang quản trị</a>";
                 }
             } else {
-                echo "<button class='login'><a href='../login.php'>Đăng Nhập</a></button>";
-                echo "<button class='resigter'><a href='../resigter.php'>Đăng kí</a></button>";
+                echo "<button class='login'><a href='./login.php'>Đăng Nhập</a></button>";
+                echo "<button class='resigter'><a href='./resigter.php'>Đăng kí</a></button>";
             }
             ?>
         </div>
@@ -64,7 +64,7 @@ $row = mysqli_fetch_assoc($result);
     </header>
     <div id="cata">
         <div class="catalories">
-            <h3>Danh mục sản phẩm</h3>
+            <h3 style="cursor:context-menu;">Danh mục sản phẩm</h3>
             <ul>
                 <li><a href="#" onclick="thaydoiIframe('../admin/mobile.php')">Điện Thoại</a></li>
                 <li><a href="#" onclick="thaydoiIframe('../admin/laptop.php')">Laptop</a></li>

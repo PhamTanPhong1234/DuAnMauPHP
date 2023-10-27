@@ -169,9 +169,30 @@ input[type="submit"]:hover {
 }
 
 iframe {
-    margin-top: 10px;
+    margin:0 10px;
     width: 80%;
-    height: 150vh;
-    /* background-color: rebeccapurple; */
+    height: 90vh;
+    overflow: hidden;
     float: right;
+}
+/* Thiết lập màu nền và viền cho nút */
+.buy-button {
+    margin-left: 160px;
+    background-color: #3498db;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hiệu ứng hover khi di chuột vào nút */
+.buy-button:hover {
+    background-color: #2980b9;
+}
+
+/* Hiệu ứng khi nút được nhấn */
+.buy-button:active {
+    background-color: #2075d3;
 }

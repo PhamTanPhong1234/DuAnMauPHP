@@ -50,6 +50,7 @@ $result = mysqli_query($connect, $query);
             <div class="soluong">
                 <p><span>Số lượng:</span> ' . $row['soluong'] . '</p>
             </div>
+            <button class ="buy-button">Mua Ngay</button>
         </div>
      </div> ';
     }
