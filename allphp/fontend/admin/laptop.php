@@ -39,16 +39,16 @@ $result = mysqli_query($connect, $query);
                 <h1>' . $row['tenSp'] . '</h1>
             </div>
             <div class="maSp">
-                <p><span>Code:</span>' . $row['maSp'] . ' </p>
+                <p><span>Mã sản phẩm: </span>' . $row['maSp'] . ' </p>
             </div>
             <div class="theloaiSp">
-                <p><span>Thể loại:</span> ' . $row['theloaiSp'] . ' </p>
+                <p><span>Thể loại: </span> ' . $row['theloaiSp'] . ' </p>
             </div>
             <div class="giaSp">
                 <p><span>Giá: </span>' . $row['giaSp'] . '<span>.000</span><span>.000đ</span></p>
             </div>
             <div class="soluong">
-                <p><span>Số lượng:</span> ' . $row['soluong'] . '</p>
+                <p><span>Số lượng: </span> ' . $row['soluong'] . '</p>
             </div>
             <button class ="buy-button">Mua Ngay</button>
         </div>

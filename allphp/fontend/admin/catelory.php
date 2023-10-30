@@ -70,7 +70,7 @@ $message = '';
             <a href="../index.php">
                 << Trang chủ</a>
                     <a href="admin.php">Danh sách sản phẩm</a>
-                    <a href="catelory.php" style="color:blue">Danh mục sản phẩm</a>
+                    <a href="catelory.php" style="color:blue">Tìm sản phẩm</a>
                     <a href="create.php">Thêm sản phẩm</a>
         </nav>
         <div class="icon-z">

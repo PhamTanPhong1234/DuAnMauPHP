@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <a href="../index.php">
                 << Trang chủ</a>
                     <a href="admin.php">Danh sách sản phẩm</a>
-                    <a href="catelory.php">Danh mục sản phẩm</a>
+                    <a href="catelory.php">Tìm sản phẩm</a>
                     <a href="create.php" style="color:blue">Thêm sản phẩm</a>
         </nav>
         <div class="icon-z">

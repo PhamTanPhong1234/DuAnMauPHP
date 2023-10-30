@@ -39,7 +39,7 @@ $result = mysqli_query($connect, $query);
                 <h1>' . $row['tenSp'] . '</h1>
             </div>
             <div class="maSp">
-                <p><span>Code:</span>' . $row['maSp'] . ' </p>
+                <p><span>Mã sản phẩm:  </span>' . $row['maSp'] . ' </p>
             </div>
             <div class="theloaiSp">
                 <p><span>Thể loại:</span> ' . $row['theloaiSp'] . ' </p>
