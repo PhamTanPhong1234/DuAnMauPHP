@@ -34,7 +34,7 @@ $row = mysqli_fetch_assoc($result);
         <?php
             if (isset($_SESSION['username'])) {
                 echo " Xin chào<span style ='color:red ; text-transform:uppercase'> " . $_SESSION["username"] . "</span><br>";
-                echo "<a href='../backend/logout.php'><i>Đăng xuất</i></a> ";
+                echo "<a href='../../backend/logout.php'><i>Đăng xuất</i></a> ";
 
                 if ($row["username"] == $_SESSION["username"]) {
                     echo "<a href='./admin/admin.php' style = 'color: blue;'> Trang quản trị</a>";

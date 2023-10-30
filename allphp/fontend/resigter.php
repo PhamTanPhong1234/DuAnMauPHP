@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $check_query = "SELECT * FROM client WHERE username = '$username'";
     $result = $connect->query($check_query);
     if ($result->num_rows  > 0) {
-        $message = "The account has been register already";
+        $message = "Tài khoản đã tồn tại";
     } else if ($password !== $cfPass) {
         $message = "Mật khẩu không trùng nhau";
     }else{

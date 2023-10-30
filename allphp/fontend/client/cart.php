@@ -16,8 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -99,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <label for="paypal">Thanh toán Khi Nhận Hàng</label>
                 </div>
                 <input type="submit" value="Đặt Hàng">';
-        echo '<span>' . $message . '</span>';
+        echo '<span style="color:blue;">' . $message . '</span>';
         echo  '</form>
         </div>
         <div class="l1 table">
@@ -142,8 +140,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo '<div class="err">
         <div class="errbox">
             <h3> Bạn Phải đăng nhập để sử dụng giỏ hàng</h3>
-            <a href="../login.php">Đăng Nhập</a><br>
-            <i>nếu chưa có tài khoản <a href="../resigter.php">Đăng Kí Ngay</a></i>
+            <a href="../login.php">Đăng Nhập</a><br><br>
+            <i>Nếu chưa có tài khoản <a href="../resigter.php">Đăng Kí Ngay</a></i>
         </div>
     </div>';
     }
